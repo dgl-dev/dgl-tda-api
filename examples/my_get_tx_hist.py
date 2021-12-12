@@ -9,7 +9,7 @@ import tda
 
 API_KEY = 'FON1HLNGRN0KOVR6UDTCF4RPEMPYIXOB@AMER.OAUTHAP'
 REDIRECT_URI = 'http://localhost:8080/'
-TOKEN_PATH = '//access_token'
+TOKEN_PATH = '../access_token'
 
 
 def make_webdriver():
@@ -39,3 +39,8 @@ r = client.get_transactions(490673362,
 for tx in r.json():
     print(json.dumps(tx, indent=1))
     print("\n +++++++++++ \n")
+
+print(f'Keys of dict: {tx.keys()}')
+print(f"Keys of fees: {tx['fees'].keys()}")
+print(f"Keys of transactionItem: {tx['transactionItem'].keys()}")
+
