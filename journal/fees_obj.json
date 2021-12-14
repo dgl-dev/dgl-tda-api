@@ -1,0 +1,12 @@
+{
+"fees": {
+        "rFee": 0.0,
+        "additionalFee": 0.0,
+        "cdscFee": 0.0,
+        "regFee": 0.05,
+        "otherCharges": 0.0,
+        "commission": 2.75,
+        "optRegFee": 0.05,
+        "secFee": 0.0
+    }
+  }

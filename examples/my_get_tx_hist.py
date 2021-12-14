@@ -11,6 +11,13 @@ API_KEY = 'FON1HLNGRN0KOVR6UDTCF4RPEMPYIXOB@AMER.OAUTHAP'
 REDIRECT_URI = 'http://localhost:8080/'
 TOKEN_PATH = '../access_token'
 
+def save_to_file(data):
+    """
+Save to file for testing
+    """
+    with open('../journal/data.json', 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
 
 def make_webdriver():
     # Import selenium here because it's slow to import
@@ -36,11 +43,16 @@ r = client.get_transactions(490673362,
                             transaction_type=tx_type,
                             start_date=std, end_date=etd)
 #print(json.dumps(r.json()))
-for tx in r.json():
-    print(json.dumps(tx, indent=1))
-    print("\n +++++++++++ \n")
+with open('../journal/data.json', 'w', encoding='utf-8') as f:
 
-print(f'Keys of dict: {tx.keys()}')
-print(f"Keys of fees: {tx['fees'].keys()}")
-print(f"Keys of transactionItem: {tx['transactionItem'].keys()}")
+    for tx in r.json():
+        json.dump(tx, f, ensure_ascii=False, indent=4)
+#     print(json.dumps(tx, indent=1))
+#     print("\n +++++++++++ \n")
+#
+# print(f'Keys of dict: {tx.keys()}')
+# print(f"Keys of fees: {tx['fees'].keys()}")
+# print(f"Keys of transactionItem: {tx['transactionItem'].keys()}")
+
+
 

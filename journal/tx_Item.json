@@ -1,0 +1,10 @@
+{
+    "transactionItem": {
+    "accountId": 490673362,
+    "amount": 5.0,
+ "price": 2.85,
+ "cost": -1425.0,
+ "instruction": "BUY",
+ "positionEffect": "CLOSING"
+  }
+ }
