@@ -8,7 +8,7 @@ import tda
 
 API_KEY = 'FON1HLNGRN0KOVR6UDTCF4RPEMPYIXOB@AMER.OAUTHAP'
 REDIRECT_URI = 'http://localhost:8080/'
-TOKEN_PATH = '//access_token'
+TOKEN_PATH = '../access_token'
 
 
 def make_webdriver():
